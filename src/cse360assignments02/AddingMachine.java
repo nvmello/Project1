@@ -2,6 +2,7 @@ package cse360assignments02;
 
 public class AddingMachine {
     private int total;
+    String ret = "0 ";  //String variable to maintain a history of transactions
 
     /**
      * Constructor
@@ -16,7 +17,7 @@ public class AddingMachine {
      * @return
      */
     public int getTotal () {
-
+        System.out.println(total);
         return 0;
     }
 
@@ -26,7 +27,8 @@ public class AddingMachine {
      * @param value
      */
     public void add (int value) {
-
+        total+=value;
+        ret = ret + "+ " + value + " ";     //append transaction to variable string
     }
 
     /**
@@ -35,6 +37,8 @@ public class AddingMachine {
      * @param value
      */
     public void subtract (int value) {
+        total-=value;
+        ret = ret + "- " + value + " ";     //append transaction to variable string
     }
 
     /**
@@ -42,7 +46,7 @@ public class AddingMachine {
      * @return
      */
     public String toString () {
-        return "";
+        return ret;
     }
 
     /**
@@ -50,5 +54,6 @@ public class AddingMachine {
      * should clear your "memory"
      */
     public void clear() {
+        total = 0;
     }
 }

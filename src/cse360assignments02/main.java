@@ -5,5 +5,7 @@ public class main {
         // write your code here
         AddingMachine myCalc = new AddingMachine();
         myCalc.add(4);
+        myCalc.subtract(3);
+        System.out.print(myCalc);
     }
 }
